@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
 import {Subscription} from 'rxjs';
+import {SERVER_API_URL} from './app.constants';
 import {LayoutConfigService} from './layout/shared/services/layout-config.service';
 
 @Component({
@@ -35,6 +36,7 @@ export class AppComponent implements OnInit, OnDestroy {
    */
   ngOnInit(): void {
     // enable/disable loader
+    console.log('API located at ' + SERVER_API_URL);
     this.loader = this.layoutConfigService.getConfig('page-loader.type');
 
     const routerSubscription = this.router.events.subscribe(event => {

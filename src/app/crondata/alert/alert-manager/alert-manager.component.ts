@@ -1,10 +1,10 @@
 import {AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import * as moment from 'moment';
+import {CronToasrtService} from '../../../shared/alert/cron-toasrt.service';
 import {PromQueryRulesService} from '../../../shared/services/prometheus/prom-query-rules.service';
 import {RuleStateEnum} from '../../../shared/types/prometheus/rules/enums/rule-state.enum';
 import {RuleAlert} from '../../../shared/types/prometheus/rules/rule-alert';
 import {RuleGroupsType} from '../../../shared/types/prometheus/rules/rule-groups.type';
-import {SysToasrtService} from '../../../shared/alert/sys-toasrt.service';
 
 @Component({
   selector: 'app-alert-manager',
@@ -18,7 +18,7 @@ export class AlertManagerComponent implements OnInit, AfterViewChecked, OnDestro
 
   constructor(private promQueryRulesService: PromQueryRulesService,
               private cdr: ChangeDetectorRef,
-              private sysToasrtService: SysToasrtService) {
+              private sysToasrtService: CronToasrtService) {
   }
 
   ngOnInit() {

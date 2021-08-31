@@ -9,7 +9,7 @@ import {IUser, User} from '../../../core/user/user.model';
 import {UserService} from '../../../core/user/user.service';
 import {ITEMS_PER_PAGE} from '../../../shared/constants/pagination.constants';
 import {SortEvent} from '../../../shared/directives/sortable/type/sort-event';
-import {SysHttpResponseErrorService} from '../../../shared/services/sys-http-response-error.service';
+import {HttpResponseErrorService} from '../../../shared/services/http-response-error.service';
 import {SortByType} from '../../../shared/types/sort-by.type';
 import {UserMgmtDeleteDialogComponent} from '../user-delete/user-management-delete-dialog.component';
 import {UserMgmtUpdateComponent} from '../user-update/user-management-update.component';
@@ -73,7 +73,7 @@ export class UserMgmtComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private modalService: NgbModal,
-    private errorService: SysHttpResponseErrorService
+    private errorService: HttpResponseErrorService
   ) {
     this.itemsPerPage = ITEMS_PER_PAGE;
   }

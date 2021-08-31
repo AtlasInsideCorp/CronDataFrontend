@@ -1,13 +1,13 @@
-import {Injectable} from '@angular/core';
 import {HttpErrorResponse} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {SysToasrtService} from '../alert/sys-toasrt.service';
+import {CronToasrtService} from '../alert/cron-toasrt.service';
 
 @Injectable({providedIn: 'root'})
-export class SysHttpResponseErrorService {
+export class HttpResponseErrorService {
 
   constructor(private translateService: TranslateService,
-              private toasrtService: SysToasrtService) {
+              private toasrtService: CronToasrtService) {
   }
 
   processError(httpErrorResponse: HttpErrorResponse): void {

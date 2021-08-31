@@ -1,8 +1,8 @@
 import {HttpClient} from '@angular/common/http';
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {SysToasrtService} from '../../../../../shared/alert/sys-toasrt.service';
-import {TargetUpdateComponent} from '../../../../prom-target-management/target-update.component';
+import {CronToasrtService} from '../../../../../shared/alert/cron-toasrt.service';
+import {TargetUpdateComponent} from '../../../../target-management/target-update.component';
 import {ApplicationService} from '../../services/applications.service';
 import {ApplicationType} from '../../type/application.type';
 
@@ -19,7 +19,7 @@ export class CronAppInstallModalComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal,
               private modalService: NgbModal,
               private http: HttpClient,
-              private toastrService: SysToasrtService,
+              private toastrService: CronToasrtService,
               private applicationService: ApplicationService) {
   }
 

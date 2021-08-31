@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {SysToasrtService} from '../../../../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../../../../shared/alert/cron-toasrt.service';
 import {ModalConfirmationComponent} from '../../../../../shared/components/modal-confirmation/modal-confirmation.component';
 import {ApplicationService} from '../../services/applications.service';
 import {ApplicationType} from '../../type/application.type';
@@ -16,7 +16,7 @@ export class CronAppCardComponent implements OnInit {
   @Output() refresh = new EventEmitter<boolean>();
 
   constructor(private modalService: NgbModal,
-              private toastrService: SysToasrtService,
+              private toastrService: CronToasrtService,
               private applicationService: ApplicationService) {
   }
 

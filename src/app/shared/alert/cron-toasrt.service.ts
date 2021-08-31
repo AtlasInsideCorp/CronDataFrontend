@@ -5,7 +5,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {ToastrService} from 'ngx-toastr';
 
 @Injectable({providedIn: 'root'})
-export class SysToasrtService {
+export class CronToasrtService {
   constructor(public toastr: ToastrService,
               private translateService: TranslateService,
               private router: Router) {
@@ -45,7 +45,7 @@ export class SysToasrtService {
   }
 
   showSuccessBottom(msg: string): void {
-    this.toastr.success(msg, 'Success!');
+    this.toastr.success(msg);
   }
 
   buildMessage(code: number): string {

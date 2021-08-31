@@ -2,7 +2,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import {User} from '../../../core/user/user.model';
 import {UserService} from '../../../core/user/user.service';
-import {SysToasrtService} from '../../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../../shared/alert/cron-toasrt.service';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class UserMgmtDeleteDialogComponent {
 
   constructor(private userService: UserService,
               public activeModal: NgbActiveModal,
-              private utmToast: SysToasrtService) {
+              private utmToast: CronToasrtService) {
   }
 
   clear() {

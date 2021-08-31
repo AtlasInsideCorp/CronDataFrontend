@@ -6,11 +6,11 @@ import {AppCategoryType} from '../shared/type/app-category.type';
 import {ApplicationType} from '../shared/type/application.type';
 
 @Component({
-  selector: 'app-cron-applications',
-  templateUrl: './cron-applications.component.html',
-  styleUrls: ['./cron-applications.component.scss']
+  selector: 'app-cron-modules',
+  templateUrl: './module-view.component.html',
+  styleUrls: ['./module-view.component.scss']
 })
-export class CronApplicationsComponent implements OnInit {
+export class ModuleViewComponent implements OnInit {
   request = {
     page: 0,
     size: 100,

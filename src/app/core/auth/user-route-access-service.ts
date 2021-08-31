@@ -3,7 +3,7 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
-import {SysToasrtService} from '../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../shared/alert/cron-toasrt.service';
 import {LoginModalService} from '../login/login-modal.service';
 import {AccountService} from './account.service';
 import {StateStorageService} from './state-storage.service';
@@ -15,7 +15,7 @@ export class UserRouteAccessService implements CanActivate {
     private loginModalService: LoginModalService,
     private accountService: AccountService,
     private stateStorageService: StateStorageService,
-    private toasrtService: SysToasrtService) {
+    private toasrtService: CronToasrtService) {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {

@@ -5,17 +5,17 @@ import {LayoutModule} from '../layout/layout.module';
 import {SyspenSharedModule} from '../shared/shared.module';
 import { AlertManagerComponent } from './alert/alert-manager/alert-manager.component';
 import { AppSettingsComponent } from './app-settings/app-settings.component';
+import {CrondataRoutingModule} from './crondata-routing.module';
+import {CrondataComponent} from './crondata.component';
 import {IframeViewComponent} from './iframe-view/iframe-view.component';
-import {TargetDeleteDialogComponent} from './prom-target-management/target-delete-dialog.component';
-import {TargetUpdateComponent} from './prom-target-management/target-update.component';
-import {TargetComponent} from './prom-target-management/target.component';
-import {SyspenRoutingModule} from './syspen-routing.module';
-import {SyspenComponent} from './syspen.component';
+import {TargetDeleteDialogComponent} from './target-management/target-delete-dialog.component';
+import {TargetUpdateComponent} from './target-management/target-update.component';
+import {TargetComponent} from './target-management/target.component';
 
 
 @NgModule({
   declarations: [
-    SyspenComponent,
+    CrondataComponent,
     IframeViewComponent,
     TargetComponent,
     TargetUpdateComponent,
@@ -26,9 +26,9 @@ import {SyspenComponent} from './syspen.component';
     SyspenSharedModule,
     LayoutModule,
     RouterModule,
-    SyspenRoutingModule,
+    CrondataRoutingModule,
     NgSelectModule
   ],
 })
-export class SyspenModule {
+export class CrondataModule {
 }

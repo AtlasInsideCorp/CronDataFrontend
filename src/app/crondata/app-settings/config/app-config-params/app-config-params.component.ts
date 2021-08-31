@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {SectionConfigParamType} from '../../../../shared/types/configuration/section-config-param.type';
-import {UtmConfigParamsService} from '../../../../shared/services/config/utm-config-params.service';
-import {SysToasrtService} from '../../../../shared/alert/sys-toasrt.service';
+import {ConfigParamsService} from '../../../../shared/services/config/config-params.service';
+import {CronToasrtService} from '../../../../shared/alert/cron-toasrt.service';
 
 
 @Component({
@@ -19,8 +19,8 @@ export class AppConfigParamsComponent implements OnInit {
   typing: any;
   saving = false;
 
-  constructor(private utmConfigParamsService: UtmConfigParamsService,
-              private toastService: SysToasrtService) {
+  constructor(private utmConfigParamsService: ConfigParamsService,
+              private toastService: CronToasrtService) {
   }
 
   ngOnInit() {

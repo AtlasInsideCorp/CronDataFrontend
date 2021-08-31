@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {SysToasrtService} from '../../../../shared/alert/sys-toasrt.service';
-import {UtmConfigParamsService} from '../../../../shared/services/config/utm-config-params.service';
+import {CronToasrtService} from '../../../../shared/alert/cron-toasrt.service';
+import {ConfigParamsService} from '../../../../shared/services/config/config-params.service';
 import {SectionConfigParamType} from '../../../../shared/types/configuration/section-config-param.type';
 import {SectionConfigType} from '../../../../shared/types/configuration/section-config.type';
 import {AppConfigDeleteConfirmComponent} from '../app-config-delete-confirm/app-config-delete-confirm.component';
@@ -25,10 +25,10 @@ export class AppConfigSectionsComponent implements OnInit, OnDestroy {
   timer: any;
   typing: any;
 
-  constructor(private utmConfigParamsService: UtmConfigParamsService,
+  constructor(private utmConfigParamsService: ConfigParamsService,
               private router: Router,
               private modalService: NgbModal,
-              private toastService: SysToasrtService) {
+              private toastService: CronToasrtService) {
   }
 
   ngOnInit() {

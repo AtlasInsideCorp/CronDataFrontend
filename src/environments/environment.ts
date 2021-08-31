@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  SERVER_API_URL: 'http://localhost:8080/',
-  SERVER_API_CONTEXT:'',
-  // SERVER_API_CONTEXT: 'crondata/',
+  SERVER_API_URL: 'http://' + window.location.hostname,
+  SERVER_API_CONTEXT:':8080/',
   BUILD_TIMESTAMP: new Date().getTime(),
   GRAFANA_URL: 'http://' + window.location.hostname + ':3000/?search=open&orgId=1',
   PROMETHEUS_URL: 'http://' + window.location.hostname + ':9090/',

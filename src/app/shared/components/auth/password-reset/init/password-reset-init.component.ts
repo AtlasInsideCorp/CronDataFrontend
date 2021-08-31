@@ -1,10 +1,10 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
-import {PasswordResetInitService} from './password-reset-init.service';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import {SysHttpResponseErrorService} from '../../../../services/sys-http-response-error.service';
-import {SysToasrtService} from '../../../../alert/sys-toasrt.service';
+import {CronToasrtService} from '../../../../alert/cron-toasrt.service';
+import {HttpResponseErrorService} from '../../../../services/http-response-error.service';
+import {PasswordResetInitService} from './password-reset-init.service';
 
 @Component({
   selector: 'app-password-reset-init',
@@ -21,8 +21,8 @@ export class PasswordResetInitComponent implements AfterViewInit {
 
   constructor(private passwordResetInitService: PasswordResetInitService,
               private fb: FormBuilder,
-              private toasrtService: SysToasrtService,
-              private errorService: SysHttpResponseErrorService,
+              private toasrtService: CronToasrtService,
+              private errorService: HttpResponseErrorService,
               public activeModal: NgbActiveModal) {
   }
 

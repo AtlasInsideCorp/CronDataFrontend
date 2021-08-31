@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import {delay} from 'rxjs/operators';
-import {SysToasrtService} from '../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../shared/alert/cron-toasrt.service';
 import {ITarget, Target} from './target.model';
 import {TargetService} from './target.service';
 
@@ -30,7 +30,7 @@ export class TargetUpdateComponent implements OnInit {
 
   constructor(protected targetService: TargetService,
               public activeModal: NgbActiveModal,
-              private sysToasrtService: SysToasrtService,
+              private sysToasrtService: CronToasrtService,
               private fb: FormBuilder) {
   }
 

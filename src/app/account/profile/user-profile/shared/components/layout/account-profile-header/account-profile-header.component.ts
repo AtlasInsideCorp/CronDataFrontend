@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Account} from '../../../../../../../core/user/account.model';
 import {AccountService} from '../../../../../../../core/auth/account.service';
-import {SysToasrtService} from '../../../../../../../shared/alert/sys-toasrt.service';
-import {SysHttpResponseErrorService} from '../../../../../../../shared/services/sys-http-response-error.service';
+import {CronToasrtService} from '../../../../../../../shared/alert/cron-toasrt.service';
+import {HttpResponseErrorService} from '../../../../../../../shared/services/http-response-error.service';
 
 @Component({
   selector: 'app-account-profile-header',
@@ -16,8 +16,8 @@ export class AccountProfileHeaderComponent implements OnInit {
   saving: any;
 
   constructor(private accountService: AccountService,
-              private toasrtService: SysToasrtService,
-              private errorService: SysHttpResponseErrorService) {
+              private toasrtService: CronToasrtService,
+              private errorService: HttpResponseErrorService) {
   }
 
   ngOnInit(): void {

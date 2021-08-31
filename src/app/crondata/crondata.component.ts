@@ -19,11 +19,11 @@ import {SESSION_AUTH_TOKEN} from '../shared/constants/global.constant';
 
 @Component({
   selector: 'app-syspen',
-  templateUrl: './syspen.component.html',
-  styleUrls: ['./syspen.component.scss'],
+  templateUrl: './crondata.component.html',
+  styleUrls: ['./crondata.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SyspenComponent implements OnInit, OnDestroy {
+export class CrondataComponent implements OnInit, OnDestroy {
   // Public variables
   selfLayout = 'default';
   asideSelfDisplay!: true;
@@ -53,7 +53,6 @@ export class SyspenComponent implements OnInit, OnDestroy {
     private cookie: CookieService,
     private tokenManagerService: TokenManagerService,
     private htmlClassService: HtmlClassService) {
-    this.cookie.set(SESSION_AUTH_TOKEN, this.tokenManagerService.getLocalToken())
     // register configs by demos
     this.layoutConfigService.loadConfigs(new LayoutConfig().configs);
     this.menuConfigService.loadConfigs(new MenuConfig().configs);

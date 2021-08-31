@@ -8,8 +8,8 @@ import {createRequestOption} from '../../util/request-util';
 @Injectable({
   providedIn: 'root'
 })
-export class UtmConfigParamsService {
-  public resourceUrl = SERVER_API_URL + 'api/utm-configuration-parameters';
+export class ConfigParamsService {
+  public resourceUrl = SERVER_API_URL + 'api/configuration-parameters';
 
   constructor(private http: HttpClient) {
   }

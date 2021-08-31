@@ -91,10 +91,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     let result = 'logo-letter-13svg';
     const headerSelfTheme = this.layoutConfigService.getConfig('header.self.theme') || '';
     if (headerSelfTheme === 'light') {
-      result = 'logo-letter-13.png';
+      result = 'logo-white.svg';
     } else {
       if (headerSelfTheme === 'dark') {
-        result = 'logo-letter-13.svg';
+        result = 'logo-white.svg';
       }
     }
     return `./assets/media/logos/${result}`;

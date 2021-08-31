@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   SERVER_API_URL: 'http://' + window.location.hostname,
-  SERVER_API_CONTEXT:'/crondata/',
+  SERVER_API_CONTEXT:':8080/',
   GRAFANA_URL: 'http://' + window.location.hostname + ':3000/?search=open&orgId=1',
   PROMETHEUS_URL: 'http://' + window.location.hostname + ':9090/',
   FILEBROWSER_URL: 'http://' + window.location.hostname + ':8081/',

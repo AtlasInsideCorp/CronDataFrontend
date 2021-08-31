@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {SysToasrtService} from '../../../shared/alert/sys-toasrt.service';
-import {UtmConfigParamsService} from '../../../shared/services/config/utm-config-params.service';
-import {UtmConfigSectionService} from '../../../shared/services/config/utm-config-section.service';
+import {CronToasrtService} from '../../../shared/alert/cron-toasrt.service';
+import {ConfigParamsService} from '../../../shared/services/config/config-params.service';
+import {ConfigSectionService} from '../../../shared/services/config/config-section.service';
 import {SectionConfigParamType} from '../../../shared/types/configuration/section-config-param.type';
 import {SectionConfigType} from '../../../shared/types/configuration/section-config.type';
 
@@ -17,9 +17,9 @@ export class AppConfigComponent implements OnInit {
   saving: any;
   configToSave: SectionConfigParamType[] = [];
 
-  constructor(private utmConfigSectionService: UtmConfigSectionService,
-              private utmConfigParamsService: UtmConfigParamsService,
-              private toastService: SysToasrtService) {
+  constructor(private utmConfigSectionService: ConfigSectionService,
+              private utmConfigParamsService: ConfigParamsService,
+              private toastService: CronToasrtService) {
   }
 
   ngOnInit() {

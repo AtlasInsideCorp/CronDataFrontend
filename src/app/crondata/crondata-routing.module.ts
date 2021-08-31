@@ -3,15 +3,15 @@ import {RouterModule, Routes} from '@angular/router';
 import {UserRouteAccessService} from '../core/auth/user-route-access-service';
 import {AccessDeniedComponent} from '../shared/components/auth/access-denied/access-denied.component';
 import {ADMIN_ROLE, USER_ROLE} from '../shared/constants/global.constant';
+import {CrondataComponent} from './crondata.component';
 import {IframeViewComponent} from './iframe-view/iframe-view.component';
-import {TargetComponent} from './prom-target-management/target.component';
-import {SyspenComponent} from './syspen.component';
+import {TargetComponent} from './target-management/target.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'crondata'},
   {
     path: 'crondata',
-    component: SyspenComponent,
+    component: CrondataComponent,
     canActivate: [UserRouteAccessService],
     data: {authorities: [USER_ROLE, ADMIN_ROLE]},
     children: [
@@ -37,7 +37,7 @@ const routes: Routes = [
       },
       {
         path: 'application',
-        loadChildren: () => import('./cron-applications/cron-applications.module').then(m => m.CronApplicationsModule),
+        loadChildren: () => import('./modules/cron-applications.module').then(m => m.CronApplicationsModule),
         canActivate: [UserRouteAccessService],
         data: {authorities: [USER_ROLE, ADMIN_ROLE]}
       },
@@ -73,6 +73,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SyspenRoutingModule {
+export class CrondataRoutingModule {
 }
 

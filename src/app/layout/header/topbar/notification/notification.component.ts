@@ -1,7 +1,7 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Subscription} from 'rxjs';
-import {SysHttpResponseErrorService} from '../../../../shared/services/sys-http-response-error.service';
+import {HttpResponseErrorService} from '../../../../shared/services/http-response-error.service';
 import {NotificationSeverityEnum} from './shared/emun/notification.enum';
 import {NotificationService} from './shared/service/notification.service';
 import {NotificationType} from './shared/type/notification.type';
@@ -49,7 +49,7 @@ export class NotificationComponent implements OnInit, OnDestroy {
 
   constructor(private sanitizer: DomSanitizer,
               private notificationService: NotificationService,
-              private sysHttpResponseErrorService: SysHttpResponseErrorService) {
+              private sysHttpResponseErrorService: HttpResponseErrorService) {
   }
 
   ngOnInit(): void {

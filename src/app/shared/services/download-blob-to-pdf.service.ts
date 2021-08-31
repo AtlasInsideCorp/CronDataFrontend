@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {SysToasrtService} from '../alert/sys-toasrt.service';
+import {CronToasrtService} from '../alert/cron-toasrt.service';
 
 
 @Injectable({
@@ -7,7 +7,7 @@ import {SysToasrtService} from '../alert/sys-toasrt.service';
 })
 export class DownloadBlobToPdfService {
 
-  constructor(private sysToasrtService: SysToasrtService) {
+  constructor(private sysToasrtService: CronToasrtService) {
   }
 
   viewPdf(dat: any, title: string): Promise<boolean> {

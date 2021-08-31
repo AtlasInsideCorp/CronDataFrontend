@@ -6,9 +6,9 @@ import {Observable} from 'rxjs';
 import {PasswordResetInitComponent} from '..';
 import {AccountService} from '../../../../core/auth/account.service';
 import {LoginService} from '../../../../core/login/login.service';
-import {ApplicationService} from '../../../../crondata/cron-applications/shared/services/applications.service';
-import {SysToasrtService} from '../../../alert/sys-toasrt.service';
-import {SysHttpResponseErrorService} from '../../../services/sys-http-response-error.service';
+import {ApplicationService} from '../../../../crondata/modules/shared/services/applications.service';
+import {CronToasrtService} from '../../../alert/cron-toasrt.service';
+import {HttpResponseErrorService} from '../../../services/http-response-error.service';
 
 @Component({
   selector: 'app-login',
@@ -29,8 +29,8 @@ export class LoginComponent implements AfterViewInit, OnInit {
 
   constructor(private loginService: LoginService,
               private router: Router,
-              private toasrtService: SysToasrtService,
-              private errorService: SysHttpResponseErrorService,
+              private toasrtService: CronToasrtService,
+              private errorService: HttpResponseErrorService,
               private modalService: NgbModal,
               private accountService: AccountService,
               private applicationService: ApplicationService,

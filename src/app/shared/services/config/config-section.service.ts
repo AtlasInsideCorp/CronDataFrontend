@@ -8,8 +8,8 @@ import {createRequestOption} from '../../util/request-util';
 @Injectable({
   providedIn: 'root'
 })
-export class UtmConfigSectionService {
-  public resourceUrl = SERVER_API_URL + 'api/utm-configuration-sections';
+export class ConfigSectionService {
+  public resourceUrl = SERVER_API_URL + 'api/configuration-sections';
 
   // GET /api/GET /api/utm-technologies
   constructor(private http: HttpClient) {

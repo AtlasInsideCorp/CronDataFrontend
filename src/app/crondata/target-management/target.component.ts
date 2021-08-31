@@ -2,7 +2,7 @@ import {HttpHeaders, HttpResponse} from '@angular/common/http';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
-import {SysToasrtService} from '../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../shared/alert/cron-toasrt.service';
 import {ITEMS_PER_PAGE} from '../../shared/constants/pagination.constants';
 import {SortEvent} from '../../shared/directives/sortable/type/sort-event';
 import {PromQueryTargetsService} from '../../shared/services/prometheus/prom-query-targets.service';
@@ -51,7 +51,7 @@ export class TargetComponent implements OnInit, OnDestroy {
   constructor(
     private targetService: TargetService,
     private modalService: NgbModal,
-    private sysToasrtService: SysToasrtService,
+    private sysToasrtService: CronToasrtService,
     private promQueryTargetsService: PromQueryTargetsService
   ) {
   }

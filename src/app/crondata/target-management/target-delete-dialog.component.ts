@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
-import {SysToasrtService} from '../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../shared/alert/cron-toasrt.service';
 import {ITarget} from './target.model';
 import {TargetService} from './target.service';
 
@@ -13,7 +13,7 @@ export class TargetDeleteDialogComponent {
   @Output() targetDeleted = new EventEmitter<any>();
 
   constructor(protected targetService: TargetService,
-              private sysToasrtService: SysToasrtService,
+              private sysToasrtService: CronToasrtService,
               public activeModal: NgbActiveModal) {
   }
 

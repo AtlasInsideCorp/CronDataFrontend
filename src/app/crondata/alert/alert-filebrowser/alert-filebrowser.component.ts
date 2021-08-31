@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FILEBROWSER_URL} from '../../../app.constants';
-import {SysToasrtService} from '../../../shared/alert/sys-toasrt.service';
+import {CronToasrtService} from '../../../shared/alert/cron-toasrt.service';
 import {PromManagementService} from '../../../shared/services/prometheus/prom-management.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AlertFilebrowserComponent implements OnInit, OnDestroy {
   urlIframe = FILEBROWSER_URL;
 
   constructor(private promManagementService: PromManagementService,
-              private toastService: SysToasrtService) {
+              private toastService: CronToasrtService) {
   }
 
   ngOnInit(): void {
