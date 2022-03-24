@@ -5,11 +5,11 @@
 export const environment = {
   production: false,
   SERVER_API_URL: 'http://' + window.location.hostname,
-  SERVER_API_CONTEXT:':8080/',
+  SERVER_API_CONTEXT:'/',
   BUILD_TIMESTAMP: new Date().getTime(),
-  GRAFANA_URL: 'http://' + window.location.hostname + ':3000/?search=open&orgId=1',
-  PROMETHEUS_URL: 'http://' + window.location.hostname + ':9090/',
-  FILEBROWSER_URL: 'http://' + window.location.hostname + ':8081/',
+  GRAFANA_URL: 'http://' + window.location.hostname + '/dashboard/?search=open&orgId=1',
+  PROMETHEUS_URL: 'http://' + window.location.hostname + '/prometheus/',
+  FILEBROWSER_URL: 'http://' + window.location.hostname + '/rules/',
   SESSION_AUTH_TOKEN: window.location.host.split(':')[0].toLocaleUpperCase(),
   DEBUG_INFO_ENABLED: true,
   VERSION: '0.0.1'
